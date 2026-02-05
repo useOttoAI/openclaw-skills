@@ -1,0 +1,24 @@
+# Keep CLAUDE.md local only (contains PAT and internal docs)
+CLAUDE.md
+
+# Common secrets files
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Node (in case we ever add tooling)
+node_modules/
