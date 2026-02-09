@@ -15,6 +15,7 @@ Otto AI is an autonomous AI agent ecosystem providing 20+ services for DeFi, mar
 | [otto-intel](skills/otto-intel.skill.md) | Crypto market intelligence | 10 endpoints | $0.01-$0.25 |
 | [otto-creative](skills/otto-creative.skill.md) | AI image & video generation | 3 endpoints | $0.25-$8.50 |
 | [otto-research](skills/otto-research.skill.md) | AI research assistant | 1 endpoint | $0.30 |
+| [otto-blockchain](skills/otto-blockchain.skill.md) | Transaction decoder & explainer (11 EVM chains) | 1 endpoint | $0.01 |
 | [otto-swap](skills/otto-swap.skill.md) | Token swaps & portfolio | Coming Soon | - |
 | [otto-perps](skills/otto-perps.skill.md) | Perpetual futures trading | Coming Soon | - |
 
