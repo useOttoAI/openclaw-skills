@@ -177,6 +177,75 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
+### 11. Token Security Scanner ($0.01)
+
+**URL:** `GET https://x402.ottoai.services/token-security`
+
+**Use when:** User wants to check if a token contract is safe before buying.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `address` | string | Yes | Token contract address (0x-prefixed) |
+| `chain` | string | No | Chain ID (default: 8453). Supported: 1 (ETH), 56 (BSC), 137 (Polygon), 42161 (Arbitrum), 8453 (Base), 43114 (Avalanche), 10 (Optimism) |
+
+**Returns:** Risk score (0-100), security flags (honeypot, hidden mint, rug pull risks), tax analysis, holder concentration, and liquidity info. Powered by GoPlus Security.
+
+**Example prompt:** "Is this token safe?" or "Check contract 0x..."
+
+---
+
+### 12. Funding Rate Dashboard ($0.01)
+
+**URL:** `GET https://x402.ottoai.services/funding-rates`
+
+**Use when:** User wants derivatives market intelligence — funding rates, open interest, whale positions.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `symbol` | string | No | Token symbol for detailed view (omit for market overview with arb opportunities) |
+
+**Returns:** With symbol: cross-exchange funding rates, OI breakdown, long/short ratios, whale positions. Without symbol: arbitrage opportunities, liquidation summary, fear/greed index, top whale positions.
+
+**Example prompt:** "What are BTC funding rates?" or "Show me derivatives overview"
+
+---
+
+### 13. DeFi Protocol Analytics ($0.01)
+
+**URL:** `GET https://x402.ottoai.services/defi-analytics`
+
+**Use when:** User wants DeFi protocol TVL data, trends, or chain comparisons.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `protocol` | string | No | Protocol slug for detailed view (e.g., "aave", "lido"). Omit for DeFi overview |
+
+**Returns:** With protocol: TVL, chain breakdown, 7d/30d changes, category. Without protocol: top 20 by TVL, gainers/losers, chain comparison.
+
+**Example prompt:** "How is Aave doing?" or "Show me DeFi TVL rankings"
+
+---
+
+### 14. TradFi Market Data ($0.01)
+
+**URL:** `GET https://x402.ottoai.services/tradfi-data`
+
+**Use when:** User wants traditional finance data for crypto context — indices, VIX, dollar, yields.
+
+**Parameters:**
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `symbol` | string | No | Ticker symbol for individual quote (e.g., "AAPL", "^GSPC"). Omit for macro dashboard |
+
+**Returns:** With symbol: real-time quote with 50/200 MA context, key stats. Without symbol: S&P 500, Nasdaq, VIX, DXY, treasury yields, gold, oil — with crypto impact analysis.
+
+**Example prompt:** "What's the VIX at?" or "Show me macro dashboard"
+
+---
+
 ## Quick Reference
 
 | Endpoint | Price | Use Case |
@@ -186,6 +255,10 @@ Payment is handled automatically via the x402 protocol headers.
 | `/token-details` | $0.01 | Basic token info |
 | `/yield-alpha` | $0.01 | DeFi yields |
 | `/suggest-a-trade` | $0.01 | AI trade ideas |
+| `/token-security` | $0.01 | Contract security audit |
+| `/funding-rates` | $0.01 | Derivatives dashboard |
+| `/defi-analytics` | $0.01 | DeFi TVL & trends |
+| `/tradfi-data` | $0.01 | TradFi macro data |
 | `/filtered-news` | $0.05 | Topic-specific news |
 | `/token-alpha` | $0.05 | Premium token intel |
 | `/kol-sentiment` | $0.05 | KOL signals |

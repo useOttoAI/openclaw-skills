@@ -22,6 +22,10 @@ All prices are in **USDC**. Supported networks:
 | `/token-details` | $0.01 | Token price and metrics |
 | `/yield-alpha` | $0.01 | DeFi yield opportunities |
 | `/suggest-a-trade` | $0.01 | AI trade suggestions |
+| `/token-security` | $0.01 | Token contract security audit (GoPlus) |
+| `/funding-rates` | $0.01 | Derivatives dashboard (funding, OI, whales) |
+| `/defi-analytics` | $0.01 | DeFi protocol analytics (TVL, trends) |
+| `/tradfi-data` | $0.01 | TradFi macro intelligence (VIX, DXY, yields) |
 | `/filtered-news` | $0.05 | Topic-filtered news |
 | `/token-alpha` | $0.05 | Premium token intelligence |
 | `/kol-sentiment` | $0.05 | KOL sentiment analysis |
