@@ -25,9 +25,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ## Endpoints
 
-### 1. Image Generation ($0.25)
+### 1. Image Generation ($0.50)
 
-**URL:** `POST https://x402.ottoai.services/generate-meme`
+**URL:** `GET https://x402.ottoai.services/generate-meme`
 
 **Use when:** User wants to generate images, memes, logos, illustrations, or edit existing images.
 
@@ -55,23 +55,28 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 2. Video Generation - Standard ($3.00)
+### 2. Video Generation ($1.00–$7.50, dynamic)
 
-**URL:** `POST https://x402.ottoai.services/video-gen`
+**URL:** `GET https://x402.ottoai.services/video-gen`
 
-**Use when:** User wants a short, high-quality video clip.
+**Use when:** User wants AI-generated video clips.
+
+**Dynamic Pricing:** Price depends on model and duration.
+| Model | Rate | 4s | 8s | 12s |
+|-------|------|-----|-----|------|
+| `sora-2-2025-12-08` (Standard) | $0.25/sec | $1.00 | $2.00 | $3.00 |
+| `sora-2-pro` (Pro) | $0.625/sec | $2.50 | $5.00 | $7.50 |
 
 **Parameters:**
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `prompt` | string | Yes | Descriptive prompt (20-500 chars). Be specific about motion and camera movement. |
-| `image_url` | string | No | Public URL to an image for image-to-video generation (PNG, JPEG, WEBP, GIF) |
+| `model` | string | Yes | "sora-2-2025-12-08" (Standard) or "sora-2-pro" (Pro) |
+| `seconds` | string | Yes | Video duration: "4", "8", or "12" |
 | `orientation` | string | No | "portrait" (720x1280, default) or "landscape" (1280x720) |
-| `tier` | string | No | "standard" (default) - 4 seconds |
+| `image_url` | string | No | Public URL to an image for image-to-video generation (PNG, JPEG, WEBP, GIF) |
 
-**Returns:** MP4 video URL with synced audio (valid for 24 hours).
-
-**Duration:** ~4 seconds
+**Returns:** MP4 video URL with synced audio (valid for 7 days).
 
 **Safety:** Prompts must meet OpenAI content policy.
 
@@ -81,35 +86,17 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 3. Video Generation - Pro ($8.50)
-
-**URL:** `POST https://x402.ottoai.services/video-gen`
-
-**Use when:** User wants longer, higher-quality video.
-
-**Parameters:**
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `prompt` | string | Yes | Descriptive prompt (20-500 chars). Be specific about motion and camera movement. |
-| `image_url` | string | No | Public URL to an image for image-to-video generation (PNG, JPEG, WEBP, GIF) |
-| `orientation` | string | No | "portrait" (720x1280, default) or "landscape" (1280x720) |
-| `tier` | string | Yes | "pro" - 8 seconds |
-
-**Returns:** MP4 video URL with synced audio (valid for 24 hours).
-
-**Duration:** ~8 seconds
-
-**Safety:** Prompts must meet OpenAI content policy.
-
----
-
 ## Quick Reference
 
 | Endpoint | Price | Output | Model |
 |----------|-------|--------|-------|
-| `/generate-meme` | $0.25 | PNG image | Gemini 3 Pro |
-| `/video-gen` (standard) | $3.00 | 4s MP4 | Sora 2 |
-| `/video-gen` (pro) | $8.50 | 8s MP4 | Sora 2 Pro |
+| `/generate-meme` | $0.50 | PNG image | Gemini 3 Pro |
+| `/video-gen` (standard, 4s) | $1.00 | 4s MP4 | Sora 2 |
+| `/video-gen` (standard, 8s) | $2.00 | 8s MP4 | Sora 2 |
+| `/video-gen` (standard, 12s) | $3.00 | 12s MP4 | Sora 2 |
+| `/video-gen` (pro, 4s) | $2.50 | 4s MP4 | Sora 2 Pro |
+| `/video-gen` (pro, 8s) | $5.00 | 8s MP4 | Sora 2 Pro |
+| `/video-gen` (pro, 12s) | $7.50 | 12s MP4 | Sora 2 Pro |
 
 ---
 

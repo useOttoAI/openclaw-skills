@@ -21,9 +21,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ## Endpoints
 
-### 1. Crypto News ($0.01)
+### 1. Crypto News ($0.001)
 
-**URL:** `POST https://x402.ottoai.services/crypto-news`
+**URL:** `GET https://x402.ottoai.services/crypto-news`
 
 **Use when:** User wants latest crypto market news with sentiment analysis.
 
@@ -35,9 +35,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 2. Twitter Summary ($0.01)
+### 2. Twitter Summary ($0.001)
 
-**URL:** `POST https://x402.ottoai.services/twitter-summary`
+**URL:** `GET https://x402.ottoai.services/twitter-summary`
 
 **Use when:** User wants a quick pulse check from crypto Twitter.
 
@@ -49,9 +49,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 3. Token Details ($0.01)
+### 3. Token Details ($0.10)
 
-**URL:** `POST https://x402.ottoai.services/token-details`
+**URL:** `GET https://x402.ottoai.services/token-details`
 
 **Use when:** User wants basic token information and metrics.
 
@@ -66,9 +66,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 4. Token Alpha ($0.05)
+### 4. Token Alpha ($0.10)
 
-**URL:** `POST https://x402.ottoai.services/token-alpha`
+**URL:** `GET https://x402.ottoai.services/token-alpha`
 
 **Use when:** User wants premium token intelligence with trading insights.
 
@@ -83,9 +83,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 5. Filtered News ($0.05)
+### 5. Filtered News ($0.10)
 
-**URL:** `POST https://x402.ottoai.services/filtered-news`
+**URL:** `GET https://x402.ottoai.services/filtered-news`
 
 **Use when:** User wants news filtered by a specific crypto topic (NOT token symbols).
 
@@ -102,9 +102,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 6. KOL Sentiment ($0.05)
+### 6. KOL Sentiment ($0.10)
 
-**URL:** `POST https://x402.ottoai.services/kol-sentiment`
+**URL:** `GET https://x402.ottoai.services/kol-sentiment`
 
 **Use when:** User wants premium signals from top crypto influencers.
 
@@ -116,9 +116,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 7. Yield Alpha ($0.01)
+### 7. Yield Alpha ($0.10)
 
-**URL:** `POST https://x402.ottoai.services/yield-alpha`
+**URL:** `GET https://x402.ottoai.services/yield-alpha`
 
 **Use when:** User wants DeFi yield opportunities.
 
@@ -130,9 +130,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 8. Trending Altcoins ($0.05)
+### 8. Trending Altcoins ($0.10)
 
-**URL:** `POST https://x402.ottoai.services/trending-altcoins`
+**URL:** `GET https://x402.ottoai.services/trending-altcoins`
 
 **Use when:** User wants to discover hot tokens to research.
 
@@ -146,7 +146,7 @@ Payment is handled automatically via the x402 protocol headers.
 
 ### 9. Mega Report ($0.25)
 
-**URL:** `POST https://x402.ottoai.services/mega-report`
+**URL:** `GET https://x402.ottoai.services/mega-report`
 
 **Use when:** User wants a comprehensive daily crypto briefing.
 
@@ -158,9 +158,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 10. Trade Suggestions ($0.01)
+### 10. Trade Suggestions ($0.10)
 
-**URL:** `POST https://x402.ottoai.services/suggest-a-trade`
+**URL:** `GET https://x402.ottoai.services/suggest-a-trade`
 
 **Use when:** User wants AI-generated trade ideas with risk management.
 
@@ -250,19 +250,19 @@ Payment is handled automatically via the x402 protocol headers.
 
 | Endpoint | Price | Use Case |
 |----------|-------|----------|
-| `/crypto-news` | $0.01 | General market news |
-| `/twitter-summary` | $0.01 | Twitter pulse check |
-| `/token-details` | $0.01 | Basic token info |
-| `/yield-alpha` | $0.01 | DeFi yields |
-| `/suggest-a-trade` | $0.01 | AI trade ideas |
+| `/crypto-news` | $0.001 | General market news |
+| `/twitter-summary` | $0.001 | Twitter pulse check |
+| `/token-details` | $0.10 | Basic token info |
+| `/yield-alpha` | $0.10 | DeFi yields |
+| `/suggest-a-trade` | $0.10 | AI trade ideas |
 | `/token-security` | $0.01 | Contract security audit |
 | `/funding-rates` | $0.01 | Derivatives dashboard |
 | `/defi-analytics` | $0.01 | DeFi TVL & trends |
 | `/tradfi-data` | $0.01 | TradFi macro data |
-| `/filtered-news` | $0.05 | Topic-specific news |
-| `/token-alpha` | $0.05 | Premium token intel |
-| `/kol-sentiment` | $0.05 | KOL signals |
-| `/trending-altcoins` | $0.05 | Hot tokens |
+| `/filtered-news` | $0.10 | Topic-specific news |
+| `/token-alpha` | $0.10 | Premium token intel |
+| `/kol-sentiment` | $0.10 | KOL signals |
+| `/trending-altcoins` | $0.10 | Hot tokens |
 | `/mega-report` | $0.25 | Daily briefing |
 
 ---

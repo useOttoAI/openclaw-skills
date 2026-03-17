@@ -21,9 +21,9 @@ Payment is handled automatically via the x402 protocol headers.
 
 ## Endpoint
 
-### AI Research ($0.30)
+### AI Research ($0.50)
 
-**URL:** `POST https://x402.ottoai.services/llm-research`
+**URL:** `GET https://x402.ottoai.services/llm-research`
 
 **Use when:** User has a question that requires research, analysis, or explanation.
 

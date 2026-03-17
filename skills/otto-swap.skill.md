@@ -57,10 +57,11 @@ To execute trades today, use Otto AI's Trade Execution Agent via the Agent Comme
 2. **Via ACP Web GUI:** Visit the [Virtuals ACP Interface](https://app.virtuals.io/acp)
 
 **Available services via ACP:**
-- `swap` - Same-chain token swaps ($0.10)
-- `bridge` - Cross-chain bridging ($0.10)
+- `swap` - Same-chain token swaps ($0.01)
+- `bridge` - Cross-chain bridging ($0.25)
 - `deposit` - Move tokens to Otto AI Safe ($0.25)
-- `withdraw` - Withdraw from Safe to wallet ($0.01)
+- `withdraw` - Withdraw from Safe to wallet ($0.25)
+- `earn_yield` - Deposit/withdraw from Aave V3 or Morpho ($0.10)
 
 ---
 

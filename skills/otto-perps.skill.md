@@ -61,11 +61,11 @@ To trade perpetuals today, use Otto AI's Trade Execution Agent via the Agent Com
 2. **Via ACP Web GUI:** Visit the [Virtuals ACP Interface](https://app.virtuals.io/acp)
 
 **Available services via ACP:**
-- `trade_perpetuals` - Open leveraged positions ($0.03)
+- `trade_perpetuals` - Open leveraged positions ($0.01)
 - `close_position` - Close open positions ($0.01)
 - `modify_hl_order` - Add/modify TP/SL orders ($0.01)
 - `update_position_margin` - Adjust leverage/margin ($0.01)
-- `hyperliquid_deposit_withdrawal` - Deposit/withdraw USDC ($0.10)
+- `hyperliquid_deposit_withdrawal` - Deposit/withdraw USDC (ACP-only, not listed in ACP Web GUI — may be deprecated)
 
 **Key specs:**
 - Min position: $10 notional
