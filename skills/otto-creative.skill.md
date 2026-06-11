@@ -1,23 +1,24 @@
 ---
 name: otto-creative
-description: AI image and video generation from Otto AI - Gemini 3 Pro & Sora 2
+description: AI image and video generation from Otto AI - GPT Image 2, Nano Banana Pro, Seedance 2.0, Sora 2, Veo 3.1
 emoji: 🎨
 homepage: https://docs.useotto.xyz
 ---
 
 # Otto AI Creative Tools
 
-Generate professional images and videos using cutting-edge AI models via Otto AI's x402 API.
+Generate professional images and videos using cutting-edge AI models via Otto AI's x402 API (multi-model, powered by fal.ai).
 
 **Models:**
-- **Image Generation:** Google Gemini 3 Pro Image Preview (Nano Banana Pro)
-- **Video Generation:** OpenAI Sora 2 / Sora 2 Pro
+- **Image Generation:** OpenAI GPT Image 2 (default — strongest typography + photorealism), Google Nano Banana Pro (memes, stylized compositions)
+- **Video Generation:** ByteDance Seedance 2.0 (default — cinematic, native synced audio), OpenAI Sora 2, Google Veo 3.1
 
 ## Payment
 
 All endpoints require x402 payment in **USDC** on:
 - **Base** (chain ID: 8453) - recommended
-- **Solana** (chain ID: solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp)
+- **Polygon** (chain ID: 137)
+- **Solana** (solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp)
 
 Payment is handled automatically via the x402 protocol headers.
 
@@ -25,28 +26,28 @@ Payment is handled automatically via the x402 protocol headers.
 
 ## Endpoints
 
-### 1. Image Generation ($0.50)
+### 1. Image Generation ($0.15 flat)
 
-**URL:** `GET https://x402.ottoai.services/generate-meme`
+**URL:** `POST https://x402.ottoai.services/generate-meme`
 
 **Use when:** User wants to generate images, memes, logos, illustrations, or edit existing images.
 
-**Parameters:**
+**Parameters** (send as a JSON request body):
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `prompt` | string | Yes | Detailed description (100+ characters recommended for best results) |
-| `image_url` | string | No | Public URL to an image for editing/composition (PNG, JPEG, WEBP, GIF) |
-| `aspect_ratio` | string | No | Output ratio: "1:1" (default), "16:9", "9:16", "4:3", "3:4", etc. |
+| `model` | string | No | `"gpt-image-2"` (default) or `"nano-banana-pro"` |
+| `image_url` | string | No | Public URL to an image for editing/remixing (PNG, JPEG, WEBP, GIF) |
+| `aspect_ratio` | string | No | `"1:1"` (default), `"16:9"`, `"9:16"` |
 
-**Returns:** PNG image URL.
+**Returns:** PNG image URL (valid for 24h).
 
 **Capabilities:**
 - Text-to-image generation
 - Image editing via URL input
 - High-fidelity text rendering (great for memes)
-- Real-time Google Search grounding for topical content
 
-**Safety:** Prompts must meet Gemini Safety Policies (no violence, NSFW, etc.)
+**Safety:** Prompts must meet the selected model's safety policy. A paid call that trips the provider's safety filter cannot be refunded on x402 — keep prompts clean.
 
 **Example prompts:**
 - "Create a meme about Bitcoin going to the moon with an astronaut otter"
@@ -55,48 +56,45 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 2. Video Generation ($1.00–$7.50, dynamic)
+### 2. Video Generation (dynamic, ~$0.46–$4.60)
 
-**URL:** `GET https://x402.ottoai.services/video-gen`
+**URL:** `POST https://x402.ottoai.services/video-gen`
 
 **Use when:** User wants AI-generated video clips.
 
-**Dynamic Pricing:** Price depends on model and duration.
-| Model | Rate | 4s | 8s | 12s |
-|-------|------|-----|-----|------|
-| `sora-2-2025-12-08` (Standard) | $0.25/sec | $1.00 | $2.00 | $3.00 |
-| `sora-2-pro` (Pro) | $0.625/sec | $2.50 | $5.00 | $7.50 |
+**Dynamic Pricing:** at-cost fal.ai rate + 15% margin, $0.05 floor. The exact quote is computed per request (model × duration) and returned in the 402; the advertised price is the Seedance 5s reference quote (~$1.75).
+| Model | Approx. rate | 5s | 8s |
+|-------|------|-----|-----|
+| `seedance-2.0` (default) | ~$0.35/s | ~$1.75 | ~$2.79 |
+| `sora-2` | ~$0.12/s | ~$0.58 | ~$0.92 |
+| `sora-2-pro` | ~$0.58/s | ~$2.88 | ~$4.60 |
+| `veo-3.1` | ~$0.46/s | ~$2.30 | ~$3.68 |
 
-**Parameters:**
+**Parameters** (JSON request body):
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `prompt` | string | Yes | Descriptive prompt (20-500 chars). Be specific about motion and camera movement. |
-| `model` | string | Yes | "sora-2-2025-12-08" (Standard) or "sora-2-pro" (Pro) |
-| `seconds` | string | Yes | Video duration: "4", "8", or "12" |
-| `orientation` | string | No | "portrait" (720x1280, default) or "landscape" (1280x720) |
-| `image_url` | string | No | Public URL to an image for image-to-video generation (PNG, JPEG, WEBP, GIF) |
+| `prompt` | string | Yes | Descriptive prompt (20-1000 chars). Be specific about motion and camera movement. |
+| `duration` | integer | Yes | Duration in seconds, 4-10 (per-model caps enforced) |
+| `model` | string | No | `"seedance-2.0"` (default), `"sora-2"`, `"sora-2-pro"`, or `"veo-3.1"` |
+| `aspect_ratio` | string | No | `"16:9"` (default), `"9:16"`, `"1:1"` |
+| `image_url` | string | No | Public URL to an image for image-to-video (auto-routes to the model's i2v variant) |
 
-**Returns:** MP4 video URL with synced audio (valid for 7 days).
+**Returns:** 720p MP4 video URL with synced audio (valid for 24h).
 
-**Safety:** Prompts must meet OpenAI content policy.
+**Safety:** Prompts must meet the selected model's content policy.
 
 **Example prompts:**
-- "A crypto trader celebrating as charts go green, cinematic lighting"
+- "A crypto trader celebrating as charts go green, cinematic lighting, slow dolly-in"
 - "Abstract visualization of blockchain transactions flowing through a network"
 
 ---
 
 ## Quick Reference
 
-| Endpoint | Price | Output | Model |
-|----------|-------|--------|-------|
-| `/generate-meme` | $0.50 | PNG image | Gemini 3 Pro |
-| `/video-gen` (standard, 4s) | $1.00 | 4s MP4 | Sora 2 |
-| `/video-gen` (standard, 8s) | $2.00 | 8s MP4 | Sora 2 |
-| `/video-gen` (standard, 12s) | $3.00 | 12s MP4 | Sora 2 |
-| `/video-gen` (pro, 4s) | $2.50 | 4s MP4 | Sora 2 Pro |
-| `/video-gen` (pro, 8s) | $5.00 | 8s MP4 | Sora 2 Pro |
-| `/video-gen` (pro, 12s) | $7.50 | 12s MP4 | Sora 2 Pro |
+| Endpoint | Price | Output | Models |
+|----------|-------|--------|--------|
+| `/generate-meme` | $0.15 flat | PNG image (24h URL) | GPT Image 2 / Nano Banana Pro |
+| `/video-gen` | dynamic ~$0.46–$4.60 | MP4 + audio (24h URL) | Seedance 2.0 / Sora 2 / Veo 3.1 |
 
 ---
 
@@ -108,22 +106,5 @@ Payment is handled automatically via the x402 protocol headers.
 - For memes, describe text placement and style.
 
 ### Video Generation
-- Describe the **motion** you want (camera pan, zoom, subject movement).
-- Include **scene details** (lighting, atmosphere, style).
-- Keep prompts focused on a single scene or action.
-
----
-
-## Generation Time
-
-- **Images:** ~10-30 seconds
-- **Video Standard:** ~2-3 minutes
-- **Video Pro:** ~5-10 minutes
-
----
-
-## Documentation
-
-Full API documentation: https://docs.useotto.xyz/acp-swarm/x402
-
-Interactive endpoint explorer: https://x402scan.com/server/2a58f75f-bd11-4020-a347-0e1c7f4912ef
+- Describe motion and camera movement explicitly.
+- Generation takes ~30s–3 min depending on model and duration — don't time out early.

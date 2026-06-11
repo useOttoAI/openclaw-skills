@@ -1,18 +1,19 @@
 ---
 name: otto-research
-description: AI research assistant from Otto AI - powered by Gemini 2.5 Pro
+description: AI research assistant from Otto AI - powered by Gemini 3.5 Flash with cited sources
 emoji: 🔬
 homepage: https://docs.useotto.xyz
 ---
 
 # Otto AI Research Assistant
 
-Ask anything and get instant, AI-powered answers with live web search. Powered by Google's Gemini 2.5 Pro.
+Ask anything and get instant, AI-powered answers with live web search and cited sources. Powered by Google's Gemini 3.5 Flash.
 
 ## Payment
 
 All endpoints require x402 payment in **USDC** on:
 - **Base** (chain ID: 8453) - recommended
+- **Polygon** (chain ID: 137)
 - **Solana** (chain ID: solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp)
 
 Payment is handled automatically via the x402 protocol headers.
@@ -21,19 +22,19 @@ Payment is handled automatically via the x402 protocol headers.
 
 ## Endpoint
 
-### AI Research ($0.50)
+### AI Research ($0.10)
 
-**URL:** `GET https://x402.ottoai.services/llm-research`
+**URL:** `POST https://x402.ottoai.services/llm-research`
 
 **Use when:** User has a question that requires research, analysis, or explanation.
 
-**Parameters:**
+**Parameters** (send as a JSON request body):
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `prompt` | string | Yes | Your question (max 180 characters) |
 | `url` | string | No | Public URL for analysis (image or webpage) |
 
-**Returns:** AI-generated text response answering the prompt.
+**Returns:** AI-generated text response answering the prompt, plus a `sources` array with the cited web sources (title + URL, up to 10).
 
 **Capabilities:**
 - Live web search for up-to-date information
