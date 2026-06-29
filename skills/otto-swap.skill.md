@@ -9,7 +9,7 @@ homepage: https://docs.useotto.xyz
 
 > **Status: Coming Soon to x402**
 >
-> Token swap execution is currently available via the [Agent Commerce Protocol (ACP)](https://docs.useotto.xyz/acp-swarm/trade-execution-agent) through Virtuals Butler. x402 API access is planned for a future release.
+> Token swap execution is currently available via the [Agent Commerce Protocol (ACP)](https://docs.useotto.xyz/acp-swarm/trade-execution-agent) — through `acp-cli` (direct, on-chain USDC-escrow jobs) or the ACP Web GUI. x402 API access is planned for a future release.
 
 ## What Will Be Available
 
@@ -53,7 +53,7 @@ Search for tokens by symbol on a specific chain.
 
 To execute trades today, use Otto AI's Trade Execution Agent via the Agent Commerce Protocol:
 
-1. **Via Butler:** Talk to [@Butler_Agent](https://twitter.com/Butler_Agent) on Twitter/X
+1. **Via `acp-cli`:** [`@virtuals-protocol/acp-cli`](https://github.com/Virtual-Protocol/acp-cli) — `acp browse`, then `acp client create-job → fund → complete/reject` (direct, on-chain USDC escrow)
 2. **Via ACP Web GUI:** Visit the [Virtuals ACP Interface](https://app.virtuals.io/acp)
 
 **Available services via ACP:**
@@ -78,6 +78,8 @@ POST https://x402.ottoai.services/swap
   "chainId": 8453
 }
 ```
+
+`fromSymbol`/`toSymbol` each accept a known **symbol** _or_ a **0x contract address**, resolved on `chainId`. Decimals are derived automatically — do not send them. Ambiguous symbols are rejected with the candidate addresses; pass the contract address to disambiguate (look it up via the tokens search endpoint above).
 
 Stay tuned for updates: [@useOttoAI](https://twitter.com/useOttoAI)
 
