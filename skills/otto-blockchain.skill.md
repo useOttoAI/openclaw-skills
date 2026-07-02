@@ -23,13 +23,13 @@ Payment is handled automatically via the x402 protocol headers.
 
 ### Transaction Explainer ($0.01)
 
-**URL:** `GET https://x402.ottoai.services/tx-explainer`
+**URL:** `POST https://x402.ottoai.services/tx-explainer`
 
-Also supports `POST` with JSON body.
+A legacy `GET` (query params) form is still accepted for backward compatibility, but `POST` with a JSON body is canonical.
 
 **Use when:** User wants to understand what a transaction did, decode a swap, transfer, approval, DeFi interaction, NFT operation, or any on-chain activity.
 
-**Parameters:**
+**Parameters** (send as a JSON request body):
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `txHash` | string | Yes | Transaction hash (0x-prefixed, 64 hex characters) |
@@ -106,18 +106,18 @@ outputLevel: "detailed"
 
 ## Example Requests
 
-**GET request:**
-```
-GET https://x402.ottoai.services/tx-explainer?txHash=0x1234...&chain=base&outputLevel=summary
-```
-
-**POST request:**
+**POST request** (canonical — JSON body):
 ```json
 {
   "txHash": "0x1234...",
   "chain": "ethereum",
   "outputLevel": "detailed"
 }
+```
+
+**Legacy GET** (still accepted for backward compatibility):
+```
+GET https://x402.ottoai.services/tx-explainer?txHash=0x1234...&chain=base&outputLevel=summary
 ```
 
 ---

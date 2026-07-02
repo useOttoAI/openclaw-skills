@@ -47,7 +47,7 @@ Payment is handled automatically via the x402 protocol headers.
 - Image editing via URL input
 - High-fidelity text rendering (great for memes)
 
-**Safety:** Prompts must meet the selected model's safety policy. A paid call that trips the provider's safety filter cannot be refunded on x402 — keep prompts clean.
+**Safety:** Prompts must meet the selected model's safety policy. A *direct* creative call is pay-as-you-go: if it trips the provider's safety filter there is no refund on that direct x402 call — keep prompts clean. (Otto's money-back guarantee applies to **router-recommended** Otto services and **Full Auto** via the [x402 Open Router](https://docs.useotto.xyz/acp-swarm/open-router) — file feedback with a ≥50-word reason for a refund capped $0.01/tx, up to 10×/wallet/day — not to direct creative calls.)
 
 **Example prompts:**
 - "Create a meme about Bitcoin going to the moon with an astronaut otter"

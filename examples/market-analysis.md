@@ -10,7 +10,7 @@ Your AI agent can perform a comprehensive market analysis using these Otto AI en
 
 **Prompt:** "What's happening in crypto today?"
 
-**Endpoint called:** `/crypto-news` ($0.01)
+**Endpoint called:** `/crypto-news` ($0.001)
 
 **Response:** AI-generated news report with bull/bear sentiment and top headlines.
 
@@ -20,7 +20,7 @@ Your AI agent can perform a comprehensive market analysis using these Otto AI en
 
 **Prompt:** "What are crypto influencers talking about?"
 
-**Endpoint called:** `/kol-sentiment` ($0.05)
+**Endpoint called:** `/kol-sentiment` ($0.001)
 
 **Response:** Sentiment analysis from top 50 KOLs with trending tokens and alpha signals.
 
@@ -30,7 +30,7 @@ Your AI agent can perform a comprehensive market analysis using these Otto AI en
 
 **Prompt:** "Give me the alpha on SOL"
 
-**Endpoint called:** `/token-alpha` ($0.05)
+**Endpoint called:** `/token-alpha` ($0.001)
 
 **Response:** Premium token intelligence including:
 - Price metrics and technicals
@@ -44,15 +44,15 @@ Your AI agent can perform a comprehensive market analysis using these Otto AI en
 
 **Prompt:** "Where can I earn yield on my USDC?"
 
-**Endpoint called:** `/yield-alpha` ($0.01)
+**Endpoint called:** `/yield-alpha` ($0.001)
 
 **Response:** Best DeFi yields with risk ratings and APY comparisons.
 
 ---
 
-## Total Cost: $0.12
+## Total Cost: $0.004
 
-For a comprehensive market overview, you've spent just $0.12 in x402 payments.
+For a comprehensive market overview, you've spent just $0.004 in x402 payments.
 
 ---
 
@@ -60,7 +60,7 @@ For a comprehensive market overview, you've spent just $0.12 in x402 payments.
 
 **Prompt:** "Give me today's market briefing"
 
-**Endpoint called:** `/mega-report` ($0.25)
+**Endpoint called:** `/mega-report` ($0.05)
 
 **Response:** Everything above combined into one comprehensive report:
 - Top headlines
@@ -70,7 +70,7 @@ For a comprehensive market overview, you've spent just $0.12 in x402 payments.
 - Yield opportunities
 - Market indicators
 
-**Total Cost:** $0.25 for the complete package.
+**Total Cost:** $0.05 for the complete package.
 
 ---
 

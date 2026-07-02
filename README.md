@@ -4,7 +4,7 @@ Install these skills in [OpenClaw](https://openclaw.ai) to give your AI agent ac
 
 ## What is Otto AI?
 
-Otto AI is an autonomous AI agent ecosystem providing 20+ services for DeFi, market intelligence, and creative tools. These skills let any OpenClaw-compatible agent access Otto AI's capabilities through pay-per-use x402 payments.
+Otto AI is an autonomous AI agent ecosystem providing 64 pay-per-call x402 services for DeFi, market intelligence, web/domain intelligence, and creative tools — including the **x402 Open Router** (recommend the best service, run a task hands-off with Full Auto, and a money-back guarantee). These skills let any OpenClaw-compatible agent access Otto AI's capabilities through pay-per-use x402 payments.
 
 **Live at:** https://x402.ottoai.services
 
@@ -12,12 +12,15 @@ Otto AI is an autonomous AI agent ecosystem providing 20+ services for DeFi, mar
 
 | Skill | Description | Endpoints | Price Range |
 |-------|-------------|-----------|-------------|
-| [otto-intel](skills/otto-intel.skill.md) | Crypto market intelligence | 14 endpoints | $0.01-$0.25 |
+| [otto-intel](skills/otto-intel.skill.md) | Crypto market intelligence | 14 endpoints | $0.01-$0.05 |
 | [otto-creative](skills/otto-creative.skill.md) | AI image & video generation | 3 endpoints | $0.25-$8.50 |
 | [otto-research](skills/otto-research.skill.md) | AI research assistant | 1 endpoint | $0.30 |
 | [otto-blockchain](skills/otto-blockchain.skill.md) | Transaction decoder & explainer (11 EVM chains) | 1 endpoint | $0.01 |
 | [otto-swap](skills/otto-swap.skill.md) | Token swaps & portfolio | Coming Soon | - |
 | [otto-perps](skills/otto-perps.skill.md) | Perpetual futures trading | Coming Soon | - |
+| [x402 Open Router](https://docs.useotto.xyz/acp-swarm/open-router) | Recommend the best service (Meta Intelligence), pay-on-your-behalf hands-off (Full Auto), and a money-back guarantee (Feedback & Refunds) | 3 endpoints | $0.001 |
+
+**Money-back guarantee:** pay a recommended Otto service (or use Full Auto) you don't like, send feedback with a ≥50-word reason, and Otto refunds the fee — capped $0.01 per transaction, up to 10× per wallet per day, to the original payer. Covers Otto's own recommended services + Full Auto, not third-party CDP Bazaar picks.
 
 ## Installation
 

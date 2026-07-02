@@ -17,20 +17,20 @@ All prices are in **USDC**. Supported networks:
 
 | Endpoint | Price | Description |
 |----------|-------|-------------|
-| `/crypto-news` | $0.01 | Real-time crypto news with sentiment |
-| `/twitter-summary` | $0.01 | Curated crypto Twitter digest |
-| `/token-details` | $0.01 | Token price and metrics |
-| `/yield-alpha` | $0.01 | DeFi yield opportunities |
+| `/crypto-news` | $0.001 | Real-time crypto news with sentiment |
+| `/twitter-summary` | $0.001 | Curated crypto Twitter digest |
+| `/token-details` | $0.001 | Token price and metrics |
+| `/yield-alpha` | $0.001 | DeFi yield opportunities |
 | `/suggest-a-trade` | $0.01 | AI trade suggestions |
-| `/token-security` | $0.01 | Token contract security audit (GoPlus) |
-| `/funding-rates` | $0.01 | Derivatives dashboard (funding, OI, whales) |
-| `/defi-analytics` | $0.01 | DeFi protocol analytics (TVL, trends) |
-| `/tradfi-data` | $0.01 | TradFi macro intelligence (VIX, DXY, yields) |
-| `/filtered-news` | $0.05 | Topic-filtered news |
-| `/token-alpha` | $0.05 | Premium token intelligence |
-| `/kol-sentiment` | $0.05 | KOL sentiment analysis |
-| `/trending-altcoins` | $0.05 | Top trending tokens |
-| `/mega-report` | $0.25 | Comprehensive daily briefing |
+| `/token-security` | $0.001 | Token contract security audit (GoPlus) |
+| `/funding-rates` | $0.001 | Derivatives dashboard (funding, OI, whales) |
+| `/defi-analytics` | $0.001 | DeFi protocol analytics (TVL, trends) |
+| `/tradfi-data` | $0.001 | TradFi macro intelligence (VIX, DXY, yields) |
+| `/filtered-news` | $0.001 | Topic-filtered news |
+| `/token-alpha` | $0.001 | Premium token intelligence |
+| `/kol-sentiment` | $0.001 | KOL sentiment analysis |
+| `/trending-altcoins` | $0.001 | Top trending tokens |
+| `/mega-report` | $0.05 | Comprehensive daily briefing |
 
 ---
 
@@ -80,16 +80,16 @@ These services are available via the Agent Commerce Protocol but not yet on x402
 ### Daily Market Research
 | Task | Endpoints | Cost |
 |------|-----------|------|
-| News check | `/crypto-news` | $0.01 |
-| KOL signals | `/kol-sentiment` | $0.05 |
-| Token deep dive | `/token-alpha` | $0.05 |
-| **Total** | | **$0.11** |
+| News check | `/crypto-news` | $0.001 |
+| KOL signals | `/kol-sentiment` | $0.001 |
+| Token deep dive | `/token-alpha` | $0.001 |
+| **Total** | | **$0.003** |
 
 ### Full Daily Briefing
 | Task | Endpoints | Cost |
 |------|-----------|------|
-| Complete briefing | `/mega-report` | $0.25 |
-| **Total** | | **$0.25** |
+| Complete briefing | `/mega-report` | $0.05 |
+| **Total** | | **$0.05** |
 
 ### Content Creation
 | Task | Endpoints | Cost |
