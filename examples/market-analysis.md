@@ -30,7 +30,7 @@ Your AI agent can perform a comprehensive market analysis using these Otto AI en
 
 **Prompt:** "Give me the alpha on SOL"
 
-**Endpoint called:** `/token-alpha` ($0.001)
+**Endpoint called:** `/token-alpha` ($0.005)
 
 **Response:** Premium token intelligence including:
 - Price metrics and technicals

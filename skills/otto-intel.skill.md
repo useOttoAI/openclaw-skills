@@ -258,9 +258,9 @@ Payment is handled automatically via the x402 protocol headers.
 | `/token-security` | $0.001 | Contract security audit |
 | `/funding-rates` | $0.001 | Derivatives dashboard |
 | `/defi-analytics` | $0.001 | DeFi TVL & trends |
-| `/tradfi-data` | $0.001 | TradFi macro data |
+| `/tradfi-data` | $0.003 | TradFi macro data |
 | `/filtered-news` | $0.001 | Topic-specific news |
-| `/token-alpha` | $0.001 | Premium token intel |
+| `/token-alpha` | $0.005 | Premium token intel |
 | `/kol-sentiment` | $0.001 | KOL signals |
 | `/trending-altcoins` | $0.001 | Hot tokens |
 | `/mega-report` | $0.05 | Daily briefing |

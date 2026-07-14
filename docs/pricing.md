@@ -25,9 +25,9 @@ All prices are in **USDC**. Supported networks:
 | `/token-security` | $0.001 | Token contract security audit (GoPlus) |
 | `/funding-rates` | $0.001 | Derivatives dashboard (funding, OI, whales) |
 | `/defi-analytics` | $0.001 | DeFi protocol analytics (TVL, trends) |
-| `/tradfi-data` | $0.001 | TradFi macro intelligence (VIX, DXY, yields) |
+| `/tradfi-data` | $0.003 | TradFi macro intelligence (VIX, DXY, yields) |
 | `/filtered-news` | $0.001 | Topic-filtered news |
-| `/token-alpha` | $0.001 | Premium token intelligence |
+| `/token-alpha` | $0.005 | Premium token intelligence |
 | `/kol-sentiment` | $0.001 | KOL sentiment analysis |
 | `/trending-altcoins` | $0.001 | Top trending tokens |
 | `/mega-report` | $0.05 | Comprehensive daily briefing |
@@ -82,7 +82,7 @@ These services are available via the Agent Commerce Protocol but not yet on x402
 |------|-----------|------|
 | News check | `/crypto-news` | $0.001 |
 | KOL signals | `/kol-sentiment` | $0.001 |
-| Token deep dive | `/token-alpha` | $0.001 |
+| Token deep dive | `/token-alpha` | $0.005 |
 | **Total** | | **$0.003** |
 
 ### Full Daily Briefing
