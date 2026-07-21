@@ -20,7 +20,7 @@ Your AI agent can perform a comprehensive market analysis using these Otto AI en
 
 **Prompt:** "What are crypto influencers talking about?"
 
-**Endpoint called:** `/kol-sentiment` ($0.001)
+**Endpoint called:** `/kol-sentiment` ($0.002)
 
 **Response:** Sentiment analysis from top 50 KOLs with trending tokens and alpha signals.
 
@@ -44,15 +44,15 @@ Your AI agent can perform a comprehensive market analysis using these Otto AI en
 
 **Prompt:** "Where can I earn yield on my USDC?"
 
-**Endpoint called:** `/yield-alpha` ($0.001)
+**Endpoint called:** `/yield-alpha` ($0.002)
 
 **Response:** Best DeFi yields with risk ratings and APY comparisons.
 
 ---
 
-## Total Cost: $0.004
+## Total Cost: $0.010
 
-For a comprehensive market overview, you've spent just $0.004 in x402 payments.
+For a comprehensive market overview, you've spent just $0.010 in x402 payments.
 
 ---
 

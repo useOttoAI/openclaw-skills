@@ -20,7 +20,7 @@ All prices are in **USDC**. Supported networks:
 | `/crypto-news` | $0.001 | Real-time crypto news with sentiment |
 | `/twitter-summary` | $0.001 | Curated crypto Twitter digest |
 | `/token-details` | $0.001 | Token price and metrics |
-| `/yield-alpha` | $0.001 | DeFi yield opportunities |
+| `/yield-alpha` | $0.002 | DeFi yield opportunities |
 | `/suggest-a-trade` | $0.01 | AI trade suggestions |
 | `/token-security` | $0.001 | Token contract security audit (GoPlus) |
 | `/funding-rates` | $0.001 | Derivatives dashboard (funding, OI, whales) |
@@ -28,8 +28,8 @@ All prices are in **USDC**. Supported networks:
 | `/tradfi-data` | $0.003 | TradFi macro intelligence (VIX, DXY, yields) |
 | `/filtered-news` | $0.001 | Topic-filtered news |
 | `/token-alpha` | $0.005 | Premium token intelligence |
-| `/kol-sentiment` | $0.001 | KOL sentiment analysis |
-| `/trending-altcoins` | $0.001 | Top trending tokens |
+| `/kol-sentiment` | $0.002 | KOL sentiment analysis |
+| `/trending-altcoins` | $0.002 | Top trending tokens |
 | `/mega-report` | $0.05 | Comprehensive daily briefing |
 
 ---
@@ -81,7 +81,7 @@ These services are available via the Agent Commerce Protocol but not yet on x402
 | Task | Endpoints | Cost |
 |------|-----------|------|
 | News check | `/crypto-news` | $0.001 |
-| KOL signals | `/kol-sentiment` | $0.001 |
+| KOL signals | `/kol-sentiment` | $0.002 |
 | Token deep dive | `/token-alpha` | $0.005 |
 | **Total** | | **$0.003** |
 

@@ -102,7 +102,7 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 6. KOL Sentiment ($0.10)
+### 6. KOL Sentiment ($0.002)
 
 **URL:** `GET https://x402.ottoai.services/kol-sentiment`
 
@@ -116,7 +116,7 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 7. Yield Alpha ($0.10)
+### 7. Yield Alpha ($0.002)
 
 **URL:** `GET https://x402.ottoai.services/yield-alpha`
 
@@ -130,7 +130,7 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 8. Trending Altcoins ($0.001)
+### 8. Trending Altcoins ($0.002)
 
 **URL:** `GET https://x402.ottoai.services/trending-altcoins`
 
@@ -253,7 +253,7 @@ Payment is handled automatically via the x402 protocol headers.
 | `/crypto-news` | $0.001 | General market news |
 | `/twitter-summary` | $0.001 | Twitter pulse check |
 | `/token-details` | $0.001 | Basic token info |
-| `/yield-alpha` | $0.001 | DeFi yields |
+| `/yield-alpha` | $0.002 | DeFi yields |
 | `/suggest-a-trade` | $0.10 | AI trade ideas |
 | `/token-security` | $0.001 | Contract security audit |
 | `/funding-rates` | $0.001 | Derivatives dashboard |
@@ -261,8 +261,8 @@ Payment is handled automatically via the x402 protocol headers.
 | `/tradfi-data` | $0.003 | TradFi macro data |
 | `/filtered-news` | $0.001 | Topic-specific news |
 | `/token-alpha` | $0.005 | Premium token intel |
-| `/kol-sentiment` | $0.001 | KOL signals |
-| `/trending-altcoins` | $0.001 | Hot tokens |
+| `/kol-sentiment` | $0.002 | KOL signals |
+| `/trending-altcoins` | $0.002 | Hot tokens |
 | `/mega-report` | $0.05 | Daily briefing |
 
 ---
