@@ -62,10 +62,22 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "report": "...",
-  "status": "success"
+  "status": "success",
+  "data": { "report": "..." },
+  "meta": {
+    "generatedAt": "2026-08-10T12:00:00.000Z",
+    "stalenessSec": 1739,
+    "degraded": false,
+    "sourceHealth": { "crypto-news-cache": "ok" }
+  }
 }
 ```
+
+`meta` tells you how old the data is. `generatedAt` is when the response was built and is **not** a freshness claim about the data itself. `stalenessSec` is the age of our cached snapshot; `dataAsOf` is the vintage of the observations, as the upstream declared it. `degraded` is `true` when an older good version was served because a refresh failed.
+
+Both `stalenessSec` and `dataAsOf` use the same three-state encoding: a value means the real figure, `null` means we looked and there genuinely is no value, and an absent key means the endpoint has no such concept and makes no claim. A live pass-through endpoint omits `stalenessSec` because it holds no snapshot to age.
+
+Each endpoint publishes its own output shape in its 402 challenge — read that rather than trusting this sample.
 
 ---
 
