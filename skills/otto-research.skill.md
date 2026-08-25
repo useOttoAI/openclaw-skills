@@ -13,7 +13,6 @@ Ask anything and get instant, AI-powered answers with live web search and cited 
 
 All endpoints require x402 payment in **USDC** on:
 - **Base** (chain ID: 8453) - recommended
-- **Polygon** (chain ID: 137)
 - **Solana** (chain ID: solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp)
 
 Payment is handled automatically via the x402 protocol headers.

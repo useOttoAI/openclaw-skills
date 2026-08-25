@@ -17,7 +17,6 @@ Generate professional images and videos using cutting-edge AI models via Otto AI
 
 All endpoints require x402 payment in **USDC** on:
 - **Base** (chain ID: 8453) - recommended
-- **Polygon** (chain ID: 137)
 - **Solana** (solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp)
 
 Payment is handled automatically via the x402 protocol headers.
