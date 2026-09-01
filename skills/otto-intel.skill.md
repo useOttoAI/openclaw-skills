@@ -102,7 +102,7 @@ Payment is handled automatically via the x402 protocol headers.
 
 ---
 
-### 6. KOL Sentiment ($0.002)
+### 6. KOL Sentiment ($0.003)
 
 **URL:** `GET https://x402.ottoai.services/kol-sentiment`
 
@@ -261,7 +261,7 @@ Payment is handled automatically via the x402 protocol headers.
 | `/tradfi-data` | $0.003 | TradFi macro data |
 | `/filtered-news` | $0.001 | Topic-specific news |
 | `/token-alpha` | $0.005 | Premium token intel |
-| `/kol-sentiment` | $0.002 | KOL signals |
+| `/kol-sentiment` | $0.003 | KOL signals |
 | `/trending-altcoins` | $0.002 | Hot tokens |
 | `/mega-report` | $0.05 | Daily briefing |
 
