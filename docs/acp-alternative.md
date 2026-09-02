@@ -73,7 +73,7 @@ Visit the [Virtuals ACP Interface](https://app.virtuals.io/acp):
 |---------|------|-----|
 | Access method | Direct HTTP | `acp-cli` / ACP Web GUI |
 | Interface | API calls | CLI / web GUI |
-| Payment | USDC (Base/Solana) | USDC (Base) |
+| Payment | USDC on Base on every route; Solana on 66 of 89 | USDC (Base) |
 | Market Intel | Yes | Yes |
 | Creative Tools | Yes | Yes |
 | Research | Yes | Yes |

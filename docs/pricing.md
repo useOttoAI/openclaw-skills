@@ -4,12 +4,12 @@ Complete pricing guide for all Otto AI x402 endpoints.
 
 ## Payment Networks
 
-All prices are in **USDC**. Supported networks:
+All prices are in **USDC**. Base is accepted on every route; Solana only where that route's own `accepts[]` lists it:
 
 | Network | Chain ID | Status |
 |---------|----------|--------|
-| Base | 8453 | Recommended |
-| Solana | solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp | Supported |
+| Base | 8453 | Accepted on every route (recommended) |
+| Solana | solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp | Only the routes whose 402 lists it — `/video-gen` is Base-only |
 
 ---
 
@@ -17,7 +17,7 @@ All prices are in **USDC**. Supported networks:
 
 | Endpoint | Price | Description |
 |----------|-------|-------------|
-| `/crypto-news` | $0.001 | Real-time crypto news with sentiment |
+| `/crypto-news` | $0.001 | Hourly ranked headlines w/ source links + sentiment |
 | `/twitter-summary` | $0.001 | Curated crypto Twitter digest |
 | `/token-details` | $0.001 | Token price and metrics |
 | `/yield-alpha` | $0.002 | DeFi yield opportunities |
@@ -28,7 +28,7 @@ All prices are in **USDC**. Supported networks:
 | `/tradfi-data` | $0.003 | TradFi macro intelligence (VIX, DXY, yields) |
 | `/filtered-news` | $0.001 | Topic-filtered news |
 | `/token-alpha` | $0.005 | Premium token intelligence |
-| `/kol-sentiment` | $0.002 | KOL sentiment analysis |
+| `/kol-sentiment` | $0.003 | KOL sentiment analysis |
 | `/trending-altcoins` | $0.002 | Top trending tokens |
 | `/mega-report` | $0.05 | Comprehensive daily briefing |
 
@@ -81,7 +81,7 @@ These services are available via the Agent Commerce Protocol but not yet on x402
 | Task | Endpoints | Cost |
 |------|-----------|------|
 | News check | `/crypto-news` | $0.001 |
-| KOL signals | `/kol-sentiment` | $0.002 |
+| KOL signals | `/kol-sentiment` | $0.003 |
 | Token deep dive | `/token-alpha` | $0.005 |
 | **Total** | | **$0.003** |
 

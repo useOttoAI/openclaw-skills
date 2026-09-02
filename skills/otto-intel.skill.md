@@ -187,7 +187,7 @@ Payment is handled automatically via the x402 protocol headers.
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `address` | string | Yes | Token contract address (0x-prefixed) |
-| `chain` | string | No | Chain ID (default: 8453). Supported: 1 (ETH), 56 (BSC), 137 (Polygon), 42161 (Arbitrum), 8453 (Base), 43114 (Avalanche), 10 (Optimism) |
+| `chain` | string | No | Chain ID **or name**, case-insensitive (default: 8453). IDs: 1 (Ethereum), 10 (Optimism), 56 (BSC), 137 (Polygon), 196 (X Layer), 8453 (Base), 42161 (Arbitrum), 43114 (Avalanche). Names also accepted: `ethereum`/`eth`, `optimism`, `bsc`/`bnb`, `polygon`/`matic`, `xlayer`/`x-layer`, `base`, `arbitrum`, `avalanche`/`avax` |
 
 **Returns:** Risk score (0-100), security flags (honeypot, hidden mint, rug pull risks), tax analysis, holder concentration, and liquidity info. Powered by GoPlus Security.
 

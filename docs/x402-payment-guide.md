@@ -13,14 +13,17 @@ x402 is an HTTP-native payment protocol that enables pay-per-use API access. Whe
 
 ## Supported Networks
 
-Otto AI accepts USDC on:
+Networks are PER ROUTE, not storefront-wide:
 
-| Network | Chain ID | Contract |
-|---------|----------|----------|
-| Base | 8453 | Native USDC |
-| Solana | solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp | USDC |
+| Network | Chain ID | Contract | Coverage |
+|---------|----------|----------|----------|
+| Base | 8453 | Native USDC | Every route |
+| Solana | solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp | USDC | Only the routes whose 402 lists it |
 
-**Recommendation:** Use Base for lowest fees and fastest confirmation.
+**Recommendation:** fund on **Base** — it is accepted on every route, and it has the lowest fees and
+fastest confirmation. A Solana-only wallet can pay for calls to 66 of the 89 routes — the ones that offer a Solana accept: read
+that route's `accepts[]` array (returned in BOTH the `PAYMENT-REQUIRED` header and the 402 JSON body),
+or `x-payment-info.networks` in `https://x402.ottoai.services/openapi.json`.
 
 ---
 
@@ -142,7 +145,7 @@ curl https://x402.ottoai.services/.well-known/x402
 ### "402 Payment Required" keeps returning
 
 - Verify your wallet has sufficient USDC
-- Check you're on the correct network (Base or Solana)
+- Check you're on a network THIS route accepts — read its `accepts[]` (Base is on every route; Solana only where the challenge lists it)
 - Ensure payment signature is included in follow-up request
 
 ### "Insufficient funds"

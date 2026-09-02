@@ -39,14 +39,17 @@ Copy the contents of any `.skill.md` file to your OpenClaw skills directory.
 
 ## Payment Setup
 
-All Otto AI services require x402 payment in USDC. Supported networks:
+All Otto AI services require x402 payment in USDC. Networks are PER ROUTE:
 
-| Network | Chain ID | Currency |
-|---------|----------|----------|
-| **Base** | 8453 | USDC |
-| **Solana** | solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp | USDC |
+| Network | Chain ID | Currency | Coverage |
+|---------|----------|----------|----------|
+| **Base** | 8453 | USDC | Every route |
+| **Solana** | solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp | USDC | Only the routes whose 402 lists it |
 
-Your agent needs a funded wallet on either network to make API calls.
+Fund your agent's wallet on **Base** and every route is payable. A Solana-only wallet can pay for
+calls to 66 of the 89 routes — the ones that offer a Solana accept. Read the route's `accepts[]`
+array (returned in both the `PAYMENT-REQUIRED` header and the 402 JSON body), or
+`x-payment-info.networks` in `https://x402.ottoai.services/openapi.json`.
 
 ## How x402 Works
 

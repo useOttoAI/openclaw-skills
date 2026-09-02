@@ -15,9 +15,9 @@ Generate professional images and videos using cutting-edge AI models via Otto AI
 
 ## Payment
 
-All endpoints require x402 payment in **USDC** on:
-- **Base** (chain ID: 8453) - recommended
-- **Solana** (solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp)
+All endpoints require x402 payment in **USDC**:
+- **Base** (chain ID: 8453) - accepted on every route, and the recommended rail
+- **Solana** (solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp) - only the routes whose own `accepts[]` lists it; `/video-gen` is Base-only
 
 Payment is handled automatically via the x402 protocol headers.
 
