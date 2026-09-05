@@ -21,7 +21,7 @@ Networks are PER ROUTE, not storefront-wide:
 | Solana | solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp | USDC | Only the routes whose 402 lists it |
 
 **Recommendation:** fund on **Base** — it is accepted on every route, and it has the lowest fees and
-fastest confirmation. A Solana-only wallet can pay for calls to 66 of the 89 routes — the ones that offer a Solana accept: read
+fastest confirmation. A Solana-only wallet can pay for calls to 67 of the 90 routes — the ones that offer a Solana accept: read
 that route's `accepts[]` array (returned in BOTH the `PAYMENT-REQUIRED` header and the 402 JSON body),
 or `x-payment-info.networks` in `https://x402.ottoai.services/openapi.json`.
 
