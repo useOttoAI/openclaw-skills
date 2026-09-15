@@ -18,6 +18,7 @@ Otto AI is an autonomous AI agent ecosystem providing 64 pay-per-call x402 servi
 | [otto-blockchain](skills/otto-blockchain.skill.md) | Transaction decoder & explainer (11 EVM chains) | 1 endpoint | $0.01 |
 | [otto-swap](skills/otto-swap.skill.md) | Token swaps & portfolio | Coming Soon | - |
 | [otto-perps](skills/otto-perps.skill.md) | Perpetual futures trading | Coming Soon | - |
+| [apex-gatekeeper](skills/apex-gatekeeper.skill.md) | Sub-millisecond pre-flight trade security & honeypot verification (Base L2) | 5 endpoints | $0.01-$2.50 |
 | [x402 Open Router](https://docs.useotto.xyz/acp-swarm/open-router) | Recommend the best service (Meta Intelligence), pay-on-your-behalf hands-off (Full Auto), and a money-back guarantee (Feedback & Refunds) | 3 endpoints | $0.001 |
 
 **Money-back guarantee:** pay a recommended Otto service (or use Full Auto) you don't like, send feedback with a ≥50-word reason, and Otto refunds the fee — capped $0.01 per transaction, up to 10× per wallet per day, to the original payer. Covers Otto's own recommended services + Full Auto, not third-party CDP Bazaar picks.
